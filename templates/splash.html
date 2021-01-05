@@ -1,0 +1,37 @@
+<b>IBM-MQ-BROWSER</b><br><br>
+This is an example html landing page for the IBMMQ browser.<br><br>
+You may use this restful service to browse messages from IBMMQ queues <br><br>
+For more info, please view the README at: <br>
+<a href="https://enter_github_link_here">https://enter_github_link_here</a><br>
+
+
+Search for string in IBMMQ<br>
+<form action="/search" method="post">
+    <input type="text" placeholder="Enter String Here" name="searchParam">
+    <button type="submit">Search</button>
+    <input type="checkbox" name="includeDelimiter" value="true"> if checked, delimiter provided in results
+    <br><br><br>
+
+
+    To speed up results remove unnecessary queues from browse list<br>
+    Only selected queues will be included in the search<br><br>
+    <input type="checkbox" name="queue_list[]" value="QUEUE.NAME.1" checked> QUEUE.NAME.1 <br>
+    <input type="checkbox" name="queue_list[]" value="QUEUE.NAME.2" checked> QUEUE.NAME.2 <br>
+
+
+    <br><br>
+    (OPTIONAL)<br> Enter filter timestamp, only messages with a timestamp after the date provided will be included in the result<br>
+    <input type="text" name="notBefore" value="false"><br>
+    Date must be in format YYYY-MM-DD HH:MM:SS, eg: 2019-12-10 20:16:01 <br><br> NOTE: The HH:MM:SS portion is optional, eg: 2019-12-10 is valid
+
+    <br><br><br><br>
+    (ADVANCED SETTINGS)<br>
+    Search other queues<br><br>
+
+     <select name= "queueSuffix">
+       <option value = "QUEUE_SUFFIX_OTHER_1">QUEUE_SUFFIX_OTHER_1</option>
+       <option value = "QUEUE_SUFFIX_OTHER_2">QUEUE_SUFFIX_OTHER_2</option>
+     </select>
+    <br><br>
+
+</form>

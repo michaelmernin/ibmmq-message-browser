@@ -1,0 +1,7 @@
+# Doc explaining values here: https://dsuch.github.io/pymqi/examples.html
+
+queue_manager: 'enter_queue_manager_here'
+channel: 'enter_channel_here'
+host: 'enter_host_here'
+port: 'enter_port_here'
+queue_prefix: 'enter_queue_suffix_here'
